@@ -8,9 +8,9 @@ load_dotenv()
 
 def get_current_weather(city="Aberdeen"):
 
-# https://api.ecowitt.net/api/v3/device/real_time?application_key=APPLICATION_KEY&api_key=API_KEY&mac=YOUR_MAC_CODE_OF_DEVICE&call_back=all
-
-    request_url = f'http://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&units=metric'
+    request_url = f'https://api.ecowitt.net/api/v3/device/real_time?application_key={os.getenv("APP_KEY")}&api_key={os.getenv("API2_KEY")}&call_back=all'
+   #  &mac=YOUR_MAC_CODE_OF_DEVICE&call_back=all
+   #    request_url = f'http://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&units=metric'
 
     weather_data = requests.get(request_url).json()
 
